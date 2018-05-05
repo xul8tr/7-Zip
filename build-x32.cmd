@@ -9,7 +9,8 @@ set VC_LTL_Helper_Load=
 set OUTDIR=%ROOT%\..\..\bin32
 mkdir %OUTDIR%
 
-set OPTS=MY_STATIC_LINK=1
+set OPTS=NEW_COMPILER=1
+::set OPTS=NEW_COMPILER=1 MY_STATIC_LINK=1
 set LFLAGS=/SUBSYSTEM:WINDOWS,"5.01"
 
 cd %ROOT%\Bundles\Format7zExtract
