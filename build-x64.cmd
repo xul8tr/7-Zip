@@ -7,6 +7,8 @@ set DisableAdvancedSupport=true
 set LTL_Mode=Light
 set VC_LTL_Helper_Load=
 set OUTDIR=%ROOT%\..\..\bin64
+set CODECS=%ROOT%\..\..\Codecs
+mkdir %CODECS%
 mkdir %OUTDIR%
 
 set OPTS=CPU=AMD64 NEW_COMPILER=1
@@ -43,23 +45,23 @@ copy AMD64\7z.sfx %OUTDIR%\7z.sfx
 
 cd %ROOT%\Bundles\Codec_brotli
 nmake %OPTS%
-copy AMD64\brotli.dll %OUTDIR%\brotli-x64.dll
+copy AMD64\brotli.dll %CODECS%\brotli-x64.dll
 
 cd %ROOT%\Bundles\Codec_lizard
 nmake %OPTS%
-copy AMD64\lizard.dll %OUTDIR%\lizard-x64.dll
+copy AMD64\lizard.dll %CODECS%\lizard-x64.dll
 
 cd %ROOT%\Bundles\Codec_lz4
 nmake %OPTS%
-copy AMD64\lz4.dll %OUTDIR%\lz4-x64.dll
+copy AMD64\lz4.dll %CODECS%\lz4-x64.dll
 
 cd %ROOT%\Bundles\Codec_lz5
 nmake %OPTS%
-copy AMD64\lz5.dll %OUTDIR%\lz5-x64.dll
+copy AMD64\lz5.dll %CODECS%\lz5-x64.dll
 
 cd %ROOT%\Bundles\Codec_zstdF
 nmake %OPTS%
-copy AMD64\zstd.dll %OUTDIR%\zstd-x64.dll
+copy AMD64\zstd.dll %CODECS%\zstd-x64.dll
 
 cd %ROOT%\..\..\C\Util\7zipInstall
 nmake %OPTS%
