@@ -105,7 +105,7 @@ void Lzma2EncPropsNormalize(CLzma2EncProps *p)
 	RadyxEncPropsNormalize(&p->lzmaProps);
 }
 
-STDMETHODIMP RadyxLzma2Enc::Code(ISequentialInStream *inStream, ISequentialOutStream *outStream,
+HRESULT RadyxLzma2Enc::Code(ISequentialInStream *inStream, ISequentialOutStream *outStream,
 	const UInt64 * /* inSize */, const UInt64 * /* outSize */, ICompressProgressInfo *progress)
 {
 	in_processed = 0;

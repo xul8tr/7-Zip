@@ -43,26 +43,6 @@ cd %ROOT%\Bundles\SFXWin
 nmake %OPTS%
 copy AMD64\7z.sfx %OUTDIR%\7z.sfx
 
-cd %ROOT%\Bundles\Codec_brotli
-nmake %OPTS%
-copy AMD64\brotli.dll %CODECS%\brotli-x64.dll
-
-cd %ROOT%\Bundles\Codec_lizard
-nmake %OPTS%
-copy AMD64\lizard.dll %CODECS%\lizard-x64.dll
-
-cd %ROOT%\Bundles\Codec_lz4
-nmake %OPTS%
-copy AMD64\lz4.dll %CODECS%\lz4-x64.dll
-
-cd %ROOT%\Bundles\Codec_lz5
-nmake %OPTS%
-copy AMD64\lz5.dll %CODECS%\lz5-x64.dll
-
-cd %ROOT%\Bundles\Codec_zstdF
-nmake %OPTS%
-copy AMD64\zstd.dll %CODECS%\zstd-x64.dll
-
 cd %ROOT%\..\..\C\Util\7zipInstall
 nmake %OPTS%
 copy AMD64\7zipInstall.exe %OUTDIR%\..\Install-x64.exe

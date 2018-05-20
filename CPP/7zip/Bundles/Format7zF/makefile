@@ -1,7 +1,7 @@
 PROG = 7z.dll
 DEF_FILE = ../../Archive/Archive2.def
 CFLAGS = $(CFLAGS) \
-  -DEXTERNAL_CODECS \
+  -DEXTERNAL_CODECS -DZSTD_LEGACY_SUPPORT \
 
 !IFNDEF UNDER_CE
 CFLAGS = $(CFLAGS) -D_7ZIP_LARGE_PAGES
@@ -29,6 +29,8 @@ COMPRESS_OBJS = $(COMPRESS_OBJS) \
   $O\Lz5Decoder.obj \
   $O\Lz5Encoder.obj \
   $O\Lz5Register.obj \
+  $O\RadyxEncoder.obj \
+  $O\RadyxRegister.obj \
   $O\ZstdDecoder.obj \
   $O\ZstdEncoder.obj \
   $O\ZstdRegister.obj \
@@ -71,6 +73,22 @@ LZ5_OBJS = \
   $O\lz5.obj \
   $O\lz5frame.obj \
   $O\lz5hc.obj \
+
+RADYX_OBJS = \
+  $O\Radyx_AsyncWriter.obj \
+  $O\Radyx_CoderInfo.obj \
+  $O\Radyx_CompressedUint64.obj \
+  $O\Radyx_Crc32.obj \
+  $O\Radyx_Lzma2Encoder.obj \
+  $O\Radyx_Lzma2Options.obj \
+  $O\Radyx_LzmaStates.obj \
+  $O\Radyx_MatchTable.obj \
+  $O\Radyx_MatchTableBuilder.obj \
+  $O\Radyx_OutStream7z.obj \
+  $O\Radyx_RadyxLzma2Enc.obj \
+  $O\Radyx_RangeEncoder.obj \
+  $O\Radyx_ThreadPool.obj \
+  $O\Radyx_UnitCompressor.obj \
 
 ZSTD_OBJS = \
   $O\entropy_common.obj \

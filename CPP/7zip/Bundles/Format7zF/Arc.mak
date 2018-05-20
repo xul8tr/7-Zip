@@ -70,6 +70,7 @@ AR_OBJS = \
   $O\HandlerCont.obj \
   $O\HfsHandler.obj \
   $O\IhexHandler.obj \
+  $O\LzHandler.obj \
   $O\Lz4Handler.obj \
   $O\Lz5Handler.obj \
   $O\LizardHandler.obj \
