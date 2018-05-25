@@ -6,6 +6,8 @@ set VC_LTL_PATH=%CD%\..\VC-LTL
 set DisableAdvancedSupport=true
 set LTL_Mode=Light
 set VC_LTL_Helper_Load=
+call "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars64.bat"
+call "%VC_LTL_PATH%\VC-LTL helper for nmake.cmd"
 set OUTDIR=%ROOT%\..\..\bin64
 set CODECS=%ROOT%\..\..\Codecs
 mkdir %CODECS%
